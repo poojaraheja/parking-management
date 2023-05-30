@@ -136,10 +136,26 @@ echo "<script>window.location.href ='manage-incomingvehicle.php'</script>";
                                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">Owner Name</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="ownername" name="ownername" class="form-control" placeholder="Owner Name" required="true"></div>
                                     </div>
-                                     <div class="row form-group">
+                                    <div class="row form-group">
                                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">Owner Contact Number</label></div>
                                         <div class="col-12 col-md-9"><input type="text" id="ownercontno" name="ownercontno" class="form-control" placeholder="Owner Contact Number" required="true" maxlength="10" pattern="[0-9]+"></div>
                                     </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                                        <div class="col-12 col-md-9">
+                                            <select name="catename" id="subs" class="form-control" onclick="subscription()">
+                                                <option value="Daily" >Daily</option>
+                                                <option value="Montly">Montly</option> 
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row form-group" id="subscription" >
+                                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Subscription Start Date</label></div>
+                                        <div class="col-12 col-md-9"><input type="date" id="ownercontno" name="ownercontno" class="form-control" placeholder="Subscription Start Date" required="true" maxlength="10" pattern="[0-9]+"></div>
+                                    </div>
+                                    
+                                    
                                    
                                     
                                     
@@ -173,11 +189,24 @@ echo "<script>window.location.href ='manage-incomingvehicle.php'</script>";
 <!-- Right Panel -->
 
 <!-- Scripts -->
+<script>
+    function subscription(){
+        if(document.getElementById("subs").value=="Daily" ){
+            document.getElementById("subscription").style.display = "none";
+
+        }else{
+            document.getElementById("subscription").style.display = "flex";
+
+        }
+
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 
 
 </body>
