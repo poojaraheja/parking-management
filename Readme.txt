@@ -11,7 +11,6 @@ How to run the Vehicle Parking Management System Project using PHP and MySQL
 5. Create a database with the name  vpmsdb
 
 6. Import vpmsdb.sql file(given inside the zip package in SQL file folder)
-
 7. Run the script http://localhost/vpms
 
 Admin Credential
